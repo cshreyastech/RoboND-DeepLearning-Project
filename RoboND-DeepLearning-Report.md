@@ -85,27 +85,14 @@ Results of some of them as below:
 Parameter                   | Trial 1 | Trial 2 | Trail 3| Trial 4 | Trial 5
           ---               | ---     | ---     | ---    | ---     | 
 Number of Encoding layers   | 2       | 2       | 3      | 3       | 2
-learning_rate               | 0.001   | 0.001   | 0.001  | 0.001   | 0.003
-batch_size                  | 256     | 128     | 64     | 32      | 32
-num_epochs                  | 100     | 100     | 100    | 100     | 100
-steps_per_epoch             | 10      | 10      | 100    | 100     | 100
-validation_steps            | 50      | 50      | 50     | 50      | 50
+learning rate               | 0.001   | 0.001   | 0.001  | 0.001   | 0.003
+batch size                  | 256     | 128     | 64     | 32      | 32
+num epochs                  | 100     | 100     | 100    | 100     | 100
+steps per epoch             | 10      | 10      | 100    | 100     | 100
+validation steps            | 50      | 50      | 50     | 50      | 50
 workers                     | 2       | 2       | 5      | 5       | 5
 Duration to compute(hours)  | 5       | 4       | 2.5    | 3       | 1.5
 Final IoU score             | 0.34    | 0.36    | 0.35   | 0.37    | 0.405
-
-
-##### Trail 5
-Number of Encoding layers: 2
-learning_rate = 0.003
-batch_size = 	32
-num_epochs = 100
-steps_per_epoch = 100
-validation_steps = 50
-workers = 5
-Final IoU score = 0.405
-Duration to complete: 1.5 hours
-
 
 I initially thought that increasing the number of layers can be beneficial however the IoU score degraded beyond 3 layers. The EC2 instance could handle 5 worker threads.
 
