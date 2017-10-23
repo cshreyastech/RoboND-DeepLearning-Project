@@ -92,6 +92,19 @@ Joint   | alpha |  a    |  d    |  q
 6       | -pi/2 |   0   | 0     |
 7       |   0   |   0   | 0.303 | 0
 
+
+Joint   | alpha |  a    |  d    |  q
+---     | ---   | ---   | ---   | ---
+1       |   0   |  0    | 0.75  |
+2       | -pi/2 |  0.35 | 0     | -pi/2
+3       |   0   |  1.25 | 0     |
+4       | -pi/2 |-0.054 | 1.5   |
+5       | pi/2  |   0   | 0     |
+6       | -pi/2 |   0   | 0     |
+7       |   0   |   0   | 0.303 | 0
+
+
+
 Sn number | Parameter                   | Trial 1 | Trial 2 | Trail 3 | Trial 4 | Trial 5
 ---       | ---                         | ---     | ---     | ---     | ---     | 
 2         | Number of Encoding layers   | 2       | 2       | 3       | 3       | 2
