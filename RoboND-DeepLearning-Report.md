@@ -93,15 +93,15 @@ Joint   | alpha |  a    |  d    |  q
 7       |   0   |   0   | 0.303 | 0
 
 
-Parameter   | Trial 1 |  Trial 2    |  Trial 3   |  Trial 4   | Trial 5
----         | ---     | ---         | ---        | ---        | ---
-1           |   0   |  0    | 0.75  |            |            |
-2           | -pi/2 |  0.35 | 0     | -pi/2
-3           |   0   |  1.25 | 0     |
-4           | -pi/2 |-0.054 | 1.5   |
-5           | pi/2  |   0   | 0     |
-6           | -pi/2 |   0   | 0     |
-7           |   0   |   0   | 0.303 | 0
+Parameter                 | Trial 1 |  Trial 2    |  Trial 3   |  Trial 4   | Trial 5
+---                       | ---     | ---         | ---        | ---        | ---
+Number of Encoding layers |   0     |  0          | 0.75       |            | 
+learning rate             | -pi/2   |  0.35       | 0          | -pi/2      | 
+batch size                |   0     |  1.25       | 0          |            |
+num epochs                | -pi/2   |-0.054       | 1.5        |            | 
+steps per epoch           | pi/2    |   0         | 0          |            |
+validation steps          | -pi/2   |   0         | 0          |            | 
+workers                   |   0     |   0         | 0.303      | 0          | 
 
 
 
