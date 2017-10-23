@@ -138,10 +138,17 @@ With these training set, it was observed in the simulation that hero could be tr
 ---
 
 
+#### Identify new Objects
+The model trained in this exercise identifies humans in red shirt. Identifying any new objects like car, cat, dog would require collecting data and creating classes of those models.
+
+---
+
+
 #### Future Enhancements
 There are many more turning options that can be tried out for a better result. Here are some of my thoughts
 1. Add 4 layers of encoder and decoder and just have skip connection for first and last pair.
 2. Remove 1 by 1 convolution layer in-between
 3. Modify batch size of 64, 128, 256 with 3 layers of encoding and decoding.
+4. Collect many more data samples on hero as mentioned in the user notes
 
 I would like to submit the report and try these options in the mean while for a better score.
