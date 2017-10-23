@@ -80,10 +80,10 @@ I played around different batch sizes starting for 256, 128, 64, 32.
 #### Training Experiments
 I ran many rans close to 7 trails with different setting and FCN layers on encoding. Note Decoding had same number of layers as of Encoding in each experiment.
 
-Results of some of them as below:
+Results of some of them as in the tabel below
 
 Parameter                   | Trial 1 | Trial 2 | Trail 3| Trial 4 | Trial 5
-          ---               | ---     | ---     | ---    | ---     | 
+---                         | ---     | ---     | ---    | ---     | 
 Number of Encoding layers   | 2       | 2       | 3      | 3       | 2
 learning rate               | 0.001   | 0.001   | 0.001  | 0.001   | 0.003
 batch size                  | 256     | 128     | 64     | 32      | 32
