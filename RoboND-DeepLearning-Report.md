@@ -80,19 +80,31 @@ I played around different batch sizes starting for 256, 128, 64, 32.
 #### Training Experiments
 I ran many rans close to 7 trails with different setting and FCN layers on encoding. Note Decoding had same number of layers as of Encoding in each experiment.
 
+
+Joint   | alpha |       a       |  d    |  q
+---     | ---   | ---   | ---   | ---
+1               |   0   |  0    | 0.75  |
+2               | -pi/2 |  0.35 | 0             | -pi/2
+3               |   0   |  1.25 | 0             |
+4               | -pi/2 |-0.054 | 1.5   |
+5               | pi/2  |   0   | 0             |
+6               | -pi/2 |   0   | 0             |
+7               |   0   |   0   | 0.303 | 0
+
+
 Results of some of them as in the tabel below
 
-Parameter                   | Trial 1 | Trial 2 | Trail 3| Trial 4 | Trial 5
----                         | ---     | ---     | ---    | ---     | 
-Number of Encoding layers   | 2       | 2       | 3      | 3       | 2
-learning rate               | 0.001   | 0.001   | 0.001  | 0.001   | 0.003
-batch size                  | 256     | 128     | 64     | 32      | 32
-num epochs                  | 100     | 100     | 100    | 100     | 100
-steps per epoch             | 10      | 10      | 100    | 100     | 100
-validation steps            | 50      | 50      | 50     | 50      | 50
-workers                     | 2       | 2       | 5      | 5       | 5
-Duration to compute(hours)  | 5       | 4       | 2.5    | 3       | 1.5
-Final IoU score             | 0.34    | 0.36    | 0.35   | 0.37    | 0.405
+Parameter                   | Trial 1 | Trial 2 | Trail 3 | Trial 4 | Trial 5
+---                         | ---     | ---     | ---     | ---     | 
+Number of Encoding layers   | 2       | 2       | 3       | 3       | 2
+learning rate               | 0.001   | 0.001   | 0.001   | 0.001   | 0.003
+batch size                  | 256     | 128     | 64      | 32      | 32
+num epochs                  | 100     | 100     | 100     | 100     | 100
+steps per epoch             | 10      | 10      | 100     | 100     | 100
+validation steps            | 50      | 50      | 50      | 50      | 50
+workers                     | 2       | 2       | 5       | 5       | 5
+Duration to compute(hours)  | 5       | 4       | 2.5     | 3       | 1.5
+Final IoU score             | 0.34    | 0.36    | 0.35    | 0.37    | 0.405
 
 I initially thought that increasing the number of layers can be beneficial however the IoU score degraded beyond 3 layers. The EC2 instance could handle 5 worker threads.
 
