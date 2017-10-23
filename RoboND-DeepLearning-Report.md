@@ -82,49 +82,18 @@ I ran many rans close to 7 trails with different setting and FCN layers on encod
 
 Results of some of them as below:
 
-##### Trail 1
-Number of Encoding layers: 2
-learning_rate = 0.001
-batch_size = 256
-num_epochs = 100
-steps_per_epoch = 10
-validation_steps = 50
-workers = 2
-Final IoU score = 0.34
-Duration to complete: 5 hours
+			    | Trial 1 | Trial 2 | Trail 3| Trial 4 | Trial 5
+		---         | ---     | ---     | ---    | ---     | ---
+Number of Encoding layers   | 2       | 2       | 3      | 3       | 2
+learning_rate		    | 0.001   | 0.001   | 0.001  | 0.001   | 0.003
+batch_size		    | 256     | 128     | 64     | 32      | 32
+num_epochs		    | 100     | 100     | 100    | 100     | 100
+steps_per_epoch		    | 10      | 10      | 100    | 100     | 100
+validation_steps	    | 50      | 50      | 50     | 50      | 50
+workers			    | 2       | 2       | 5      | 5       | 5
+Duration to compute(hours)  | 5       | 4       | 2.5    | 3       | 1.5
+Final IoU score		    | 0.34    | 0.36    | 0.35   | 0.37    | 0.405
 
-##### Trail 2
-Number of Encoding layers: 2
-learning_rate = 0.001
-batch_size = 128
-num_epochs = 100
-steps_per_epoch = 10
-validation_steps = 50
-workers = 2
-Final IoU score = 0.36
-Duration to complete: 4 hours
-
-##### Trail 3
-Number of Encoding layers: 3
-learning_rate = 0.001
-batch_size = 	64
-num_epochs = 100
-steps_per_epoch = 100
-validation_steps = 50
-workers = 5
-Final IoU score = 0.35
-Duration to complete: 2.5 hours
-
-##### Trail 4
-Number of Encoding layers: 3
-learning_rate = 0.001
-batch_size = 	32
-num_epochs = 100
-steps_per_epoch = 100
-validation_steps = 50
-workers = 5
-Final IoU score = 0.37
-Duration to complete: 3 hours
 
 ##### Trail 5
 Number of Encoding layers: 2
