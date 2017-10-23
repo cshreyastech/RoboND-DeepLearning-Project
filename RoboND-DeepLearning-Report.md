@@ -93,7 +93,7 @@ Joint   | alpha |       a       |  d    |  q
 7               |   0   |   0   | 0.303 | 0
 
 Sn number | Parameter                   | Trial 1 | Trial 2 | Trail 3 | Trial 4 | Trial 5
-1         | ---                         | ---     | ---     | ---     | ---     | 
+---       | ---                         | ---     | ---     | ---     | ---     | 
 2         | Number of Encoding layers   | 2       | 2       | 3       | 3       | 2
 3         | learning rate               | 0.001   | 0.001   | 0.001   | 0.001   | 0.003
 4         | batch size                  | 256     | 128     | 64      | 32      | 32
