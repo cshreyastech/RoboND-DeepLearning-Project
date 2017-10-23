@@ -95,15 +95,15 @@ Joint   | alpha |  a    |  d    |  q
 
 Parameter                  | Trial 1 |  Trial 2    |  Trial 3   |  Trial 4   | Trial 5
 ---                        | ---     | ---         | ---        | ---        | ---
-Number of Encoding layers  |   0     |  0          | 0.75       |            | 
-learning rate              | -pi/2   |  0.35       | 0          | -pi/2      | 
-batch size                 |   0     |  1.25       | 0          |            |
-num epochs                 | -pi/2   |-0.054       | 1.5        |            | 
-steps per epoch            | pi/2    |   0         | 0          |            |
-validation steps           | -pi/2   |   0         | 0          |            | 
-workers                    |   0     |   0         | 0.303      | 0          | 
-duration to compute(hours) |   0     |   0         | 0.303      | 0          | 
-final IoU score            |   0     |   0         | 0.303      | 0          | 
+Number of Encoding layers  |   2     |  2          | 3          | 3          | 2
+learning rate              | 0.001   | 0.001       | 0.001      | 0.001      | 0.003
+batch size                 |  256    |  128        | 64         | 32         | 32
+num epochs                 |  100    |  100        | 100        | 100        | 100
+steps per epoch            |  10     |  10         | 100        | 100        | 100
+validation steps           |  50     |  50         | 50         | 50         | 50
+workers                    |  2      |  2          | 5          | 5          | 5
+duration to compute(hours) |  5      |  4          | 2.5        | 3          | 2
+final IoU score            |  0.34   |  0.36       | 0.35       | 0.37       | 0.405
 
 
 
