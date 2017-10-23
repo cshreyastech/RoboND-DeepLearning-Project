@@ -2,14 +2,10 @@
 ---
 [//]: # (Image References)
 
-[ConfusionMatix1]: ./images/ConfusionMatix1.JPG
-[ObjectRecognision1]: ./images/ObjectRecognision1.JPG
-
-[ConfusionMatix2]: ./images/ConfusionMatix2.JPG
-[ObjectRecognision2]: ./images/ObjectRecognision2.JPG
-
-[ConfusionMatix3]: ./images/ConfusionMatix3.JPG
-[ObjectRecognision3]: ./images/ObjectRecognision3.JPG
+[fcn]: ./images/fcn.png
+[epoch3]: ./images/epoch3_trainingcure_step100.png
+[epoch50]: ./images/epoch50_trainingcure_step100.png
+[epoch100]: ./images/epoch100_trainingcure_step100.png
 
 #### Introduction
 Goal of Follow Me project is to architect and train a deep learning model that will make a simulated quadcopter follow a specific person called hero.
@@ -64,6 +60,7 @@ My final implementation of the project had two layers of encoder and decoder use
 
 Skip connections were used to combine encoding layers to that of corresponding decoding layers as denoted in the diagram. This was used to avoid losing of information in the process of encoding and decoding multiple layers. It uses information from multiple resolution there by preserving information.
 
+![alt text][fcn]
 ---
 
 
@@ -97,16 +94,19 @@ final IoU score            |  0.34   |  0.36       | 0.35       | 0.37       | 0
 I initially thought that increasing the number of layers can be beneficial however the IoU score degraded beyond 3 layers. The EC2 instance could handle 5 worker threads.
 
 Increasing the learning rate from 0.001 to 0.003 also helped in improving the score 0.35 to 0.37.
-Finally Increasing steps_per_epoch from 10 to 100 helped in attaining the required score after many experiments.
+Finally Increasing steps_per_epoch from 10 to 100 and learning rate from 0.001 to 0.003 helped in attaining the required score after many experiments.
 
+As seen in the training curve below, loss decreases with Epoch.
+Here are some samples at various epochs at their 100 step.
 
-As show in the training curve graph, loss decreases with Epoch. 
-# INSERT GRAPHS
-Third iteration showed a high loss of loss: 0.0603 - val_loss: 0.0994
+Step 003: - loss: 0.0495 - val_loss: 0.1021
+![alt text][epoch3]
 
-Fifty iteration showed loss of loss: 0.0198 - val_loss: 0.0282
+Step 050: - loss: 0.0198 - val_loss: 0.0282
+![alt text][epoch50]
 
-Hundredth iteration showed loss: 0.0149 - val_loss: 0.0290
+Step 100: - loss: 0.0149 - val_loss: 0.0290
+![alt text][epoch100]
 
 There are many scope for improvement as explained in the “Future Enhancement” session.
 
