@@ -82,7 +82,7 @@ I ran many rans close to 7 trails with different setting and FCN layers on encod
 
 Results of some of them as in the tabel below
 
-Joint   | alpha |       a       |  d    |  q
+Joint   | alpha |  a    |  d    |  q
 ---     | ---   | ---   | ---   | ---
 1       |   0   |  0    | 0.75  |
 2       | -pi/2 |  0.35 | 0     | -pi/2
