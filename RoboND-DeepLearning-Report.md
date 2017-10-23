@@ -44,13 +44,15 @@ As mentioned about FCN comprises of three components.
 3. Decoder
 
 ##### Encoder
-Encoder has a series of convolution layer with increasing filter depth which is used to pre-train and extract details from the image
+Encoder has a series of convolution layer with increasing filter depth which is used to extract details from the image. However, in doing so spatial information is lost.
 
 ##### 1 by 1 convolution
-1 by 1 convolution used instead of fully connected layer to preserve spatial information on passing through FCN. It preserves information in 4D instead of 2D as in fully connected layer
+1 by 1 convolution used on every pixel to transform feature maps to class-wise predictions. This helps in pixel-wise classification.
 
 ##### Decoder
-Every Encoder convolution layer has a corresponding decoder layer to retrieves image size by using Transposed Convolution.
+Every Encoder convolution layer has a corresponding decoder layer to retrieves image size by using Transposed Convolution. 
+Decoder further retrieves lost spatial information during Encoding by skip connections. It helps in bringing in lower level information as we proceed.
+During Up-sampling, skip connection sums the information from previous layer and the corresponding Encoding layer.
 
 This information is further used in segmentation of each pixel in the image.
 
@@ -82,17 +84,19 @@ Note, Decoding had same number of layers as of Encoding in each experiment.
 
 Results of some of them as in the tabel below
 
-Parameter                  | Trial 1 |  Trial 2    |  Trial 3   |  Trial 4   | Trial 5
----                        | ---     | ---         | ---        | ---        | ---
-Number of Encoding layers  |   2     |  2          | 3          | 3          | 2
-learning rate              | 0.001   | 0.001       | 0.001      | 0.001      | 0.003
-batch size                 |  256    |  128        | 64         | 32         | 32
-num epochs                 |  100    |  100        | 100        | 100        | 100
-steps per epoch            |  10     |  10         | 100        | 100        | 100
-validation steps           |  50     |  50         | 50         | 50         | 50
-workers                    |  2      |  2          | 5          | 5          | 5
-duration to compute(hours) |  5      |  4          | 2.5        | 3          | 2
-final IoU score            |  0.34   |  0.36       | 0.35       | 0.37       | 0.405
+Parameter                  | Trial 1 |  Trial 2    |  Trial 3    |  Trial 4    | Trial 5
+---                        | ---     | ---         | ---         | ---         | ---
+Number of Encoding layers  |   2     |  2          | 3           | 3           | 2
+Encoder filter sizes       |  32, 64 |  32, 64     | 32, 64, 128 | 32, 64, 128 | 32, 64
+1 by 1 conn filter sizes   |  128    |  128        | 256         | 256         | 128
+learning rate              |  0.001  |  0.001      | 0.001       | 0.001       | 0.003
+batch size                 |  256    |  128        | 64          | 32          | 32
+num epochs                 |  100    |  100        | 100         | 100         | 100
+steps per epoch            |  10     |  10         | 100         | 100         | 100
+validation steps           |  50     |  50         | 50          | 50          | 50
+workers                    |  2      |  2          | 5           | 5           | 5
+duration to compute(hours) |  5      |  4          | 2.5         | 3           | 2
+final IoU score            |  0.34   |  0.36       | 0.35        | 0.37        | 0.405
 
 I initially thought that increasing the number of layers can be beneficial, however the IoU score degraded beyond 3 layers. The EC2 instance could handle 5 worker threads.
 
