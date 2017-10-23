@@ -103,7 +103,7 @@ steps per epoch            |  10     |  10         | 100        | 100        | 1
 validation steps           |  50     |  50         | 50         | 50         | 50
 workers                    |  2      |  2          | 5          | 5          | 5
 duration to compute(hours) |  5      |  4          | 2.5        | 3          | 2
-##### final IoU score      |  0.34   |  0.36       | 0.35       | 0.37       | 0.405
+final IoU score            |  0.34   |  0.36       | 0.35       | 0.37       | 0.405
 
 
 
