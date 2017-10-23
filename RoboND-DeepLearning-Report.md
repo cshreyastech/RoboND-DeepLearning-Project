@@ -99,17 +99,17 @@ Finally Increasing steps_per_epoch from 10 to 100 and learning rate from 0.001 t
 As seen in the training curve below, loss decreases with Epoch.
 Here are some samples at various epochs at their 100 step.
 
-Step 003: - loss: 0.0495 - val_loss: 0.1021
+epoch 3, step 100: - loss: 0.0495 - val_loss: 0.1021
 
 ![alt text][epoch3]
 
 
-Step 050: - loss: 0.0198 - val_loss: 0.0282
+epoch 50, step 100: - loss: 0.0198 - val_loss: 0.0282
 
 ![alt text][epoch50]
 
 
-Step 100: - loss: 0.0149 - val_loss: 0.0290
+epoch 100, step 100: - loss: 0.0149 - val_loss: 0.0290
 
 ![alt text][epoch100]
 
