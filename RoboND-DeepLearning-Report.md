@@ -83,7 +83,7 @@ I ran many rans close to 7 trails with different setting and FCN layers on encod
 Results of some of them as below:
 
 Parameter                   | Trial 1 | Trial 2 | Trail 3| Trial 4 | Trial 5
-          ---               | ---     | ---     | ---    | ---     | ---
+          ---               | ---     | ---     | ---    | ---     | 
 Number of Encoding layers   | 2       | 2       | 3      | 3       | 2
 learning_rate               | 0.001   | 0.001   | 0.001  | 0.001   | 0.003
 batch_size                  | 256     | 128     | 64     | 32      | 32
